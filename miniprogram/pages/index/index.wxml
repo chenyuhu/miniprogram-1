@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="formDetail">
+  添加喂奶量
+</view>
+
+<view class="formDetail-milk">
+  <text>选择喂奶时间</text>
+  <picker
+    mode="time"
+    value="{{form.milkTime}}"
+    start="00:00"
+    end="23:59"
+    data-value="milkTime"
+    bindchange="changeTimeNote">
+    {{form.milkTime}}
+  </picker>
+</view>
+
+<view class="formDetail-input">
+  <input
+    value="{{form.milkNote}}"
+    type="number"
+    confirm-type="done"
+    data-value="milkNote"
+    bindblur="changeTimeNote"
+    placeholder="请输入喂奶量" />
+</view>
+
+<view class="formButton">
+  <button
+    type="primary"
+    form-type="submit"
+    bindtap="onSubmitMilk"
+    loading="{{loading}}">
+    确定
+  </button>
+</view>
+
+<view class="formDetail formSleep">
+  添加宝宝睡觉状况
+</view>
+
+<view class="formButton formDetail-sleep">
+  <text>
+    宝宝睡眠状态
+  </text>
+  <text
+    data-sleeptype="{{form.sleepType}}"
+    bindtap="onSubmitSleep">
+    {{form.sleepType}}
+  </text>
+</view>

@@ -1,0 +1,31 @@
+.formDetail {
+  padding-left: 10px;
+}
+
+.formDetail-milk {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.formDetail-input {
+  padding: 10px 20px;
+}
+
+.formDetail-sleep  {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.formButton {
+  padding: 10px 20px;
+}
+
+.formSleep {
+  margin-top: 10px;
+}
+
+.formButton button {
+  width: 100% !important;
+}
