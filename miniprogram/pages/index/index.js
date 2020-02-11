@@ -55,7 +55,8 @@ Page({
         fail: (err) => {
           wx.showToast({
             title: "出现错误!",
-            mask: true
+            mask: true,
+            icon: "none"
           })
           that.setData({
             loading: !that.data.loading
@@ -64,7 +65,9 @@ Page({
       })
     }else {
       wx.showToast({
-        title: "请输入喂奶量"
+        title: "请输入喂奶量",
+        mask: true,
+        icon: "none"
       })
       that.setData({
         loading: !that.data.loading
@@ -97,7 +100,8 @@ Page({
         fail: () => {
           wx.showToast({
             title: "添加失败!",
-            mask: true
+            mask: true,
+            icon: "none"
           })
           wx.hideLoading()
         }
