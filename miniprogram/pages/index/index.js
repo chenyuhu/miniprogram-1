@@ -26,16 +26,13 @@ Page({
 
   // 提交喂奶数据
   onSubmitMilk(event) {
-    wx.showLoading({
-      title: "加载中"
-    })
     const that = this
     that.setData({
       loading: !that.data.loading
     })
     const form = that.data.form
     const date = new Date().toLocaleDateString()
-    if(form.milkNote){
+    if(form.milkNote && form.milkNote > 0){
       db.collection("niuniumilk").add({
         data: {
           milkNote: form.milkNote,
@@ -73,7 +70,6 @@ Page({
         loading: !that.data.loading
       })
     }
-    wx.hideLoading()
   },
 
   // 提交睡眠数据

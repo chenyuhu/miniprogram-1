@@ -22,7 +22,7 @@
     type="number"
     confirm-type="done"
     data-value="milkNote"
-    bindblur="changeTimeNote"
+    bindinput="changeTimeNote"
     placeholder="请输入喂奶量" />
 </view>
 
