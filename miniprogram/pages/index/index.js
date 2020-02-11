@@ -36,7 +36,8 @@ Page({
       db.collection("niuniumilk").add({
         data: {
           milkNote: form.milkNote,
-          milkTime: new Date(`${date} ${form.milkTime}`)
+          milkTime: new Date(`${date} ${form.milkTime}`),
+          createDate: new Date()
         },
         success: () => {
           that.setData({
@@ -44,7 +45,7 @@ Page({
             form: {
               milkTime: form.milkTime,
               milkNote: null,
-              sleepType: form.sleepType
+              sleepType: form.sleepType,
             }
           })
           wx.showToast({
@@ -88,7 +89,8 @@ Page({
     if (sleepType === "睡着了") {
       db.collection("niuniusleep").add({
         data: {
-          sleepStartDate: new Date()
+          sleepStartDate: new Date(),
+          createDate: new Date()
         },
         success: () => {
           wx.showToast({
